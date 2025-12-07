@@ -1,9 +1,7 @@
 [tool.poetry]
 name = "jquants-api-client"
 version = "0.0.0" # use poetry-dynamic-versioning
-authors = [
-    "J-Quants Project Contributors <j-quants@jpx.co.jp>",
-]
+authors = ["J-Quants Project Contributors <j-quants@jpx.co.jp>"]
 description = "J-Quants API Client Library"
 readme = "README.md"
 license = "Apache-2.0"
@@ -13,9 +11,7 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 keywords = ["jquants", "api", "client", "J-Quants"]
-packages = [
-    { include = "jquantsapi" }
-]
+packages = [{ include = "jquantsapi" }]
 homepage = "https://github.com/J-Quants/jquants-api-client-python"
 
 [tool.poetry.urls]
@@ -26,24 +22,21 @@ requires = ["poetry-core>=1.0.0", "poetry-dynamic-versioning>=1.0.0,<2.0.0"]
 build-backend = "poetry_dynamic_versioning.backend"
 
 [tool.poetry.dependencies]
-python = "^3.8.0"
+python = "^3.10"
 requests = "^2.23.0"
 types-requests = "^2.28.5"
 types-python-dateutil = "^2.8.19"
 pandas = ">=1.4.3"
-numpy = [
-    { version = "^1.22.4", python = ">=3.8,<3.12" },
-    { version = "^1.26.0", python = ">=3.12" }
-]
-tomli = { version = "^2.0.1", python = ">=3.8,<3.11" }
-tenacity = "^8.0.1"
+numpy = ">=1.26.0"
+tomli = { version = "^2.0.1", python = ">=3.10,<3.11" }
+tenacity = ">8.0.1"
 
 [tool.poetry.group.dev.dependencies]
 black = "^24.3.0"
 isort = "^5.10.1"
-flake8 = "^5.0.0"
+flake8 = "^7.0.0"
 mypy = "^1.9.0"
-pyproject-flake8 = "^5.0.0"
+pyproject-flake8 = "^7.0.0"
 pytest = "8.1.1"
 pytest-cov = "^5.0.0"
 
